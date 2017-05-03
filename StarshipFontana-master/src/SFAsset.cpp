@@ -10,7 +10,7 @@ SFAsset::SFAsset(SFASSETTYPE type, std::shared_ptr<SFWindow> window): type(type)
     sprite = IMG_LoadTexture(sf_window->getRenderer(), "assets/player.png");
     break;
 
-    // Commented out to remove firing of bullets - MK
+    // Commented out to remove firing of bullets - MK //
 
     /**
   case SFASSET_PROJECTILE:
@@ -101,7 +101,7 @@ void SFAsset::OnRender() {
   SDL_RenderCopy(sf_window->getRenderer(), sprite, NULL, &rect);
 }
 
-// Vector2 input changed from (-5.0f, 0.0f) - MK
+// Vector2 input changed from (-5.0f, 0.0f) - MK //
 
 void SFAsset::GoWest() {
   Vector2 c = *(bbox->centre) + Vector2(-4.0f, 0.0f);
@@ -115,7 +115,7 @@ void SFAsset::GoEast() {
   int w, h;
   SDL_GetRendererOutputSize(sf_window->getRenderer(), &w, &h);
 
-  // Vector2 imput changed from (5.0f, 0.0f) - MK
+  // Vector2 imput changed from (5.0f, 0.0f) - MK //
 
   Vector2 c = *(bbox->centre) + Vector2(4.0f, 0.0f);
   if(!(c.getX() > w)) {
@@ -124,7 +124,7 @@ void SFAsset::GoEast() {
   }
 }
 
-// Vector2 input changed from (0.0f, 1.0f) - MK
+// Vector2 input changed from (0.0f, 1.0f) - MK //
 
 void SFAsset::GoNorth() {
   Vector2 c = *(bbox->centre) + Vector2(0.0f, 4.0f);
@@ -132,7 +132,7 @@ void SFAsset::GoNorth() {
   bbox->centre = make_shared<Vector2>(c);
 }
 
-// Function GoSouth added for asset movement down screen. Adapted from GoNorth function - MK
+// Function GoSouth added for asset movement down screen. Adapted from GoNorth function - MK //
 
 void SFAsset::GoSouth() {
     Vector2 c = *(bbox->centre) + Vector2(0.0f, -4.0f);
@@ -158,7 +158,7 @@ bool SFAsset::IsAlive() {
   return (SFASSET_DEAD != type);
 }
 
-    // Function sets assets to "not alive" in event of collision. Commented out to remove firing of bullets - MK
+    // Function sets assets to "not alive" in event of collision. Commented out to remove firing of bullets - MK //
 
     /**
 void SFAsset::HandleCollision() {

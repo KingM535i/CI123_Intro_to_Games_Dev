@@ -6,6 +6,9 @@
 #include <list>     // Pull in list
 #include <sstream>
 
+// Included for random number generation - MK //
+#include <ctime>
+
 using namespace std;
 
 #include "SFCommon.h"
@@ -26,21 +29,23 @@ public:
   void    OnUpdateWorld();
   void    OnRender();
 
-  // Commented out to remove firing of bullets - MK
+  // Functions for random number generation - MK //
+  int randomNumberX();
+  int randomNumberY();
+
+  // Commented out to remove firing of bullets - MK //
   //void    FireProjectile();
   // ^^
 
 private:
   bool                    is_running;
 
-  // ^^
-
   shared_ptr<SFWindow>       sf_window;
 
   shared_ptr<SFAsset>        player;
   shared_ptr<SFBoundingBox>  app_box;
 
-  // Commented out to remove firing of bullets - MK
+  // Commented out to remove firing of bullets - MK //
   //list<shared_ptr<SFAsset> > projectiles;
   // ^^
 
@@ -48,5 +53,6 @@ private:
   list<shared_ptr<SFAsset> > coins;
 
   int fire;
+
 };
 #endif

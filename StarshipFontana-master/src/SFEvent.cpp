@@ -20,7 +20,7 @@ SFEvent::SFEvent(const SDL_Event & event) {
       code = SFEVENT_PLAYER_RIGHT;
       break;
 
-      // Code added for player up & down movement. Converts keyboard arrow key inputs to events - MK
+      // Code added for player up & down movement. Converts keyboard arrow key inputs to events - MK //
 
       case SDLK_UP:
       code = SFEVENT_PLAYER_UP;
@@ -31,7 +31,7 @@ SFEvent::SFEvent(const SDL_Event & event) {
 
       // ^^
 
-      // Code commented out to remove firing of bullets - MK
+      // Code commented out to remove firing of bullets - MK //
 
       /**
     case SDLK_SPACE:

@@ -22,7 +22,7 @@ using namespace std;
  * the subclassing strategy becomes a better option.
  */
 
-    // SFASSET_PROJECTILE, - Removed from enum SFASSETTYPE to remove firing of bullets - MK
+    // SFASSET_PROJECTILE, - Removed from enum SFASSETTYPE to remove firing of bullets - MK //
 
 enum SFASSETTYPE {SFASSET_DEAD, SFASSET_PLAYER, SFASSET_ALIEN, SFASSET_COIN};
 
@@ -42,14 +42,14 @@ public:
   virtual void      GoWest();
   virtual void      GoNorth();
 
-  // Function added for asset movement down screen - MK
+  // Function added for asset movement down screen - MK //
   virtual void GoSouth();
   // ^^
 
   virtual void      SetNotAlive();
   virtual bool      IsAlive();
 
-  // Commented out to remove firing of bullets - MK
+  // Commented out to remove firing of bullets - MK //
   //virtual void      HandleCollision();
   // ^^
 
